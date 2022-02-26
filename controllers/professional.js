@@ -1,0 +1,30 @@
+exports.getProfessional = (req,res,next) => {
+    res.status(200).json({
+    // posts: [{title: 'Post', content: 'content'}]
+    professionalName: "Cara Agard", 
+     base64Image: "<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>", 
+     nameLink: 'https://caraagard.link',
+     linkedInLink: 'https://caragard@linkedIn',
+     githubLink : 'https://github.com/CaraAgard/',
+     message: 'the post is created'
+    });
+};
+
+
+
+// {
+//     "image": {
+//       "mime": "image/png",
+//       "data": "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"
+//     }
+//   }
+// exports.createPost = (req, res, next) => {
+//     const title = req.body.title;
+//     const content = req.body.content;
+//     //create a post in the database
+//     res.status(201).json({
+//         message: 'the post was created',
+//         post: { id: new Date().toISOString(), title: title, content: content }
+//     });
+// };
+
